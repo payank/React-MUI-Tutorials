@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Stack, TextField, InputAdornment } from '@mui/material'
 
+//text fields in user registration/logic form etc.
 export const MuiTextField = () => {
   const [value, setValue] = useState('')
 
