@@ -24,13 +24,24 @@ export const MuiButton = () => {
   }
   return (
     <Stack spacing={4}>
+      
+      //stack is nothing but dev tag
       <Stack spacing={2} direction='row'>
+        
+        //for less attention
+        //with href, button will asc as anchor tag
         <Button variant='text' href='https://google.com'>
           Text
         </Button>
+        
+        //for more attention
         <Button variant='contained'>Contained</Button>
+        
+        //for normal attention
         <Button variant='outlined'>Outlined</Button>
       </Stack>
+      
+      
       <Stack spacing={2} direction='row'>
         <Button variant='contained' color='primary'>
           Primary
@@ -51,6 +62,8 @@ export const MuiButton = () => {
           Success
         </Button>
       </Stack>
+      
+      //dispay='flex; is default value, so we need to specify the display='block'
       <Stack display='block' spacing={2} direction='row'>
         <Button variant='contained' size='small'>
           Small
@@ -62,6 +75,8 @@ export const MuiButton = () => {
           Large
         </Button>
       </Stack>
+      
+      
       <Stack spacing={2} direction='row'>
         <Button
           variant='contained'
@@ -73,6 +88,8 @@ export const MuiButton = () => {
         <Button variant='contained' endIcon={<SendIcon />} disableElevation>
           Send
         </Button>
+        
+        //just a icon which act as button
         <IconButton color='success' size='small' aria-label='send'>
           <SendIcon />
         </IconButton>
