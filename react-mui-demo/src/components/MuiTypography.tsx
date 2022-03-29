@@ -13,6 +13,8 @@ export const MuiTypography = () => {
       <Typography variant='h6'>h6 Heading</Typography>
       <Typography variant='subtitle1'>subtitle1</Typography>
       <Typography variant='subtitle2'>subtitle2</Typography>
+      
+      //act as a paragraph tag with default font size of 16 px, it has variant='body1'
       <Typography>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe
         magnam illo quas illum minus, aperiam, iusto optio quisquam veniam
