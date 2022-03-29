@@ -10,6 +10,12 @@ export const MuiSelect = () => {
     setCountries(typeof value === 'string' ? value.split(',') : value)
   }
   return (
+    
+    //Box is similar to div tag on which we can apply css properties like height and width
+    //instead of textField we could have also used 'select' which material ui provides
+    //select prop is used for dropdown
+    //SelectProps is used for multi select drop down
+    //fullWidth props expands the dropdwon to maximum allowed width in our case 250px
     <Box width='250px'>
       <TextField
         label='Select country'
@@ -22,6 +28,8 @@ export const MuiSelect = () => {
         helperText='Please select your country'
         value={countries}
         onChange={handleChange}>
+        fullWidth
+        
         <MenuItem value='IN'>India</MenuItem>
         <MenuItem value='US'>USA</MenuItem>
         <MenuItem value='AU'>Australia</MenuItem>
