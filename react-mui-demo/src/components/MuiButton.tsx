@@ -78,6 +78,7 @@ export const MuiButton = () => {
       
       
       <Stack spacing={2} direction='row'>
+        //disable default ripple effect on button click
         <Button
           variant='contained'
           startIcon={<SendIcon />}
@@ -85,6 +86,8 @@ export const MuiButton = () => {
           onClick={() => alert('Clicked')}>
           Send
         </Button>
+        
+        //disbale default button elevation
         <Button variant='contained' endIcon={<SendIcon />} disableElevation>
           Send
         </Button>
@@ -94,7 +97,12 @@ export const MuiButton = () => {
           <SendIcon />
         </IconButton>
       </Stack>
+      
+      
       <Stack direction='row'>
+        
+        //button group to control the buttons props from a main button group, see different props:
+        //aria-label is added for accessibility
         <ButtonGroup
           variant='text'
           orientation='vertical'
@@ -106,18 +114,28 @@ export const MuiButton = () => {
           <Button>Right</Button>
         </ButtonGroup>
       </Stack>
+      
+      
       <Stack direction='row'>
+        //toggle button group which handles onchange of different buttons in a group
+        //handleFormateChanges acceppts two args, one is event, another is responsible for updating the format state on button click/unclick
+        //exclusive props enable to format(toggle) only one button at a time
         <ToggleButtonGroup
           exclusive
           value={formats}
           onChange={handleFormatChange}
+          color='success'
+          size='small'
           aria-label='text formatting'>
+          
           <ToggleButton value='bold' aria-label='bold'>
             <FormatBoldIcon />
           </ToggleButton>
+          
           <ToggleButton value='italic' aria-label='italic'>
             <FormatItalicIcon />
           </ToggleButton>
+          
           <ToggleButton value='underlined' aria-label='underline'>
             <FormatUnderlinedIcon />
           </ToggleButton>
