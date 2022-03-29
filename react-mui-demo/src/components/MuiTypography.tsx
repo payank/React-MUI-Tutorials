@@ -6,7 +6,8 @@ export const MuiTypography = () => {
       <Typography variant='h1'>h1 Heading</Typography>
       <Typography variant='h2'>h2 Heading</Typography>
       <Typography variant='h3'>h3 Heading</Typography>
-      //h4 tag will become as h1 beacouse of component
+      
+      //h4 tag will become as h1 beacouse of component, gutterBottom has by default value as false but if given it will provide bottom border to the tag
       <Typography variant='h4' component='h1' gutterBottom>
         h4 Heading
       </Typography> 
