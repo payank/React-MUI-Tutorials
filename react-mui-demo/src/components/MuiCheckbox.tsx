@@ -15,9 +15,12 @@ export const MuiCheckbox = () => {
   const [skills, setSkills] = useState<string[]>([])
   console.log(skills)
 
+  //this is for single checkbox element
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setAcceptTnC(event.target.checked)
   }
+  
+  //this function is for handling state of multipl checkboxes
   const handleSkillChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const index = skills.indexOf(event.target.value)
     if (index === -1) {
@@ -41,7 +44,9 @@ export const MuiCheckbox = () => {
           label='Accept terms and conditions'
         />
       </Box>
+      
       <Box>
+        //icon as a checkbox
         <Checkbox
           icon={<BookmarkBorderIcon />}
           checkedIcon={<BookmarkIcon />}
@@ -49,10 +54,14 @@ export const MuiCheckbox = () => {
           onChange={handleChange}
         />
       </Box>
+      
+      //for checkbox group we need FromGroup, FormControl, FormLabel 
       <Box>
         <FormControl error>
           <FormLabel>Skills</FormLabel>
-          <FormGroup>
+          
+          //row props allign checkboxes in a row
+          <FormGroup row>
             <FormControlLabel
               control={
                 <Checkbox
