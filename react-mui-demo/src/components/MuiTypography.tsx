@@ -1,5 +1,7 @@
 import { Typography } from '@mui/material'
 
+//concerned in apperance of text 
+
 export const MuiTypography = () => {
   return (
     <div>
